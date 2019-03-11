@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Progress</title>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+      <style>
+         :root {
+         --progress: #cdcdcd;
+         --progress-filled: #202020;
+         }
+         * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         }
+         body {
+         font-family: 'Open Sans', sans-serif;
+	 background: f6f6f6;
+         }
+         .bars {
+         padding: 30px 20px;
+         display: inline-block;
+    	 min-height: 154px;
+    	 width: 201px;
+         }
+         .bar {
+         display: inline-flex;
+         margin: 0 0 15px;
+         align-items: center;
+         }
+         .bar:last-child {
+         margin: 0;
+         }
+         h2 {
+         color: var(--progress-filled);
+         margin-left: 10px;
+         }
+         .progress {
+         width: 50px;
+         height: 20px;
+         display: flex;
+         background: var(--progress);
+         border-radius: 5px;
+    	 box-shadow: 0 5px 10px -5px rgba(0,0,0,0.5);
+         }
+         .progress-filled {
+         background: var(--progress-filled);
+         border-radius: 5px;
+         flex-basis: 50%;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="bars">
+         <div class="bar d">
+            <div class="progress">
+               <div class="progress-filled"></div>
+            </div>
+            <h2>Day: 100%</h2>
+         </div>
+         <div class="bar m">
+            <div class="progress">
+               <div class="progress-filled"></div>
+            </div>
+            <h2>Month: 100%</h2>
+         </div>
+         <div class="bar y">
+            <div class="progress">
+               <div class="progress-filled"></div>
+            </div>
+            <h2>Year: 100%</h2>
+         </div>
+      </div>
+      <script src="popup.js"></script>
+   </body>
+</html>
